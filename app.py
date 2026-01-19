@@ -138,10 +138,19 @@ with st.container():
                 st.rerun()
 
 # --- 6. QUẢNG CÁO HEADER (BANNER NGANG) ---
-# [HƯỚNG DẪN]: Xóa dòng <h3>...</h3> và dán script quảng cáo vào giữa <div>
+# ĐÃ GẮN CODE QUẢNG CÁO SỐ 1 (728x90)
 components.html("""
 <div style="display:flex; justify-content:center; align-items:center; background:#111; height:90px; color:#555; border:1px dashed #444;">
-    <h3>[ HEADER ADS 970x90 ]</h3>
+    <script>
+      atOptions = {
+        'key' : '7cd087fd6ceed9ebc182a8dafcde705c',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/7cd087fd6ceed9ebc182a8dafcde705c/invoke.js"></script>
 </div>
 """, height=100)
 
@@ -158,10 +167,20 @@ if st.session_state.show_howto:
 col_L, col_M, col_R = st.columns([1, 4, 1])
 
 # ➤ CỘT TRÁI: ADS
+# ĐÃ GẮN CODE QUẢNG CÁO SỐ 3 (160x600)
 with col_L:
     components.html("""
     <div style="background:#111; height:600px; color:#555; display:flex; justify-content:center; align-items:center; border:1px dashed #444;">
-        [ ADS TRÁI 160x600 ]
+        <script>
+          atOptions = {
+            'key' : 'a2290a3f17b278ebb0282ecbc8a7d5be',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/a2290a3f17b278ebb0282ecbc8a7d5be/invoke.js"></script>
     </div>
     """, height=600)
 
@@ -174,11 +193,21 @@ with col_M:
     url = st.text_input("", placeholder=T['placeholder'])
     
     # ➤ ADS GIỮA (Dưới Input)
+    # Tận dụng code số 1 (728x90) vì không có code 468x60 riêng
     components.html("""
-    <div style="display:flex; justify-content:center; background:#111; height:60px; align-items:center; color:#555; border:1px dashed #333;">
-        [ ADS GIỮA 468x60 ]
+    <div style="display:flex; justify-content:center; background:#111; height:90px; align-items:center; color:#555; border:1px dashed #333; overflow:hidden;">
+        <script>
+          atOptions = {
+            'key' : '7cd087fd6ceed9ebc182a8dafcde705c',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/7cd087fd6ceed9ebc182a8dafcde705c/invoke.js"></script>
     </div>
-    """, height=70)
+    """, height=100)
     
     # Tùy chọn (Chia 3 cột cho nút tải nằm cùng hàng)
     c_fmt, c_qual, c_btn = st.columns([1.5, 1.5, 1.5])
@@ -203,9 +232,19 @@ with col_M:
         st.markdown('</div>', unsafe_allow_html=True)
 
     # ➤ ADS DƯỚI NÚT TẢI
+    # ĐÃ GẮN CODE QUẢNG CÁO SỐ 2 (300x250)
     components.html("""
     <div style="display:flex; justify-content:center; background:#111; height:250px; align-items:center; color:#555; border:1px dashed #333; margin-top:10px;">
-        [ QUẢNG CÁO VUÔNG 300x250 ]
+        <script>
+          atOptions = {
+            'key' : 'fc08ecca6a7d3aa2086c08e8ee11a125',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/fc08ecca6a7d3aa2086c08e8ee11a125/invoke.js"></script>
     </div>
     """, height=260)
 
@@ -272,16 +311,42 @@ with col_M:
                 st.error(f"{T['error']} \nDetails: {str(e)}")
 
 # ➤ CỘT PHẢI: ADS
+# ĐÃ GẮN CODE QUẢNG CÁO SỐ 3 (160x600)
 with col_R:
     components.html("""
     <div style="background:#111; height:600px; color:#555; display:flex; justify-content:center; align-items:center; border:1px dashed #444;">
-        [ ADS PHẢI 160x600 ]
+        <script>
+          atOptions = {
+            'key' : 'a2290a3f17b278ebb0282ecbc8a7d5be',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/a2290a3f17b278ebb0282ecbc8a7d5be/invoke.js"></script>
     </div>
     """, height=600)
 
 # --- 9. STICKY FOOTER ADS ---
+# ĐÃ GẮN CODE QUẢNG CÁO SỐ 1 (728x90)
 components.html("""
 <div style="position:fixed; bottom:0; left:0; width:100%; background:#000; border-top:2px solid red; text-align:center; padding:10px; z-index:9999;">
-    <span style="color:white; font-weight:bold;">[ DÁN QUẢNG CÁO STICKY TẠI ĐÂY - 728x90 ]</span>
+    <script>
+      atOptions = {
+        'key' : '7cd087fd6ceed9ebc182a8dafcde705c',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/7cd087fd6ceed9ebc182a8dafcde705c/invoke.js"></script>
 </div>
-""", height=50)
+""", height=120)
+
+# --- 10. POPUNDER / INVISIBLE ADS ---
+# ĐÃ GẮN CODE QUẢNG CÁO SỐ 4 (Script chạy ngầm)
+components.html("""
+    <script src="https://pl28512831.effectivegatecpm.com/de/98/23/de982324f79133ce2d436361b3a8fdf3.js"></script>
+""", height=0)
