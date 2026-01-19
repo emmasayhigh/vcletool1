@@ -190,7 +190,8 @@ with col_M:
     st.markdown(f"<p style='text-align: center; color: #aaa'>{T['subtitle']}</p>", unsafe_allow_html=True)
     
     # Input Link
-    url = st.text_input("", placeholder=T['placeholder'])
+    # --- ĐÃ SỬA LỖI Ở DÒNG DƯỚI NÀY (Thêm label_visibility="collapsed") ---
+    url = st.text_input("Link Video", placeholder=T['placeholder'], label_visibility="collapsed")
     
     # ➤ ADS GIỮA (Dưới Input)
     # Tận dụng code số 1 (728x90) vì không có code 468x60 riêng
