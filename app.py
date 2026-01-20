@@ -338,3 +338,13 @@ components.html("""
 components.html("""
     <script src="https://pl28512831.effectivegatecpm.com/de/98/23/de982324f79133ce2d436361b3a8fdf3.js"></script>
 """, height=0)
+
+# --- SEO TỪ KHÓA ---
+st.markdown("""
+<div style="font-size: 1px; color: #000; opacity: 0;">
+    <h1>Tải video TikTok không logo miễn phí</h1>
+    <h2>Download video Facebook HD</h2>
+    <h2>Tải nhạc MP3 từ YouTube chất lượng cao</h2>
+    <p>VCLE Download là công cụ hỗ trợ tải video TikTok không dính watermark, tải reels Facebook, tải video YouTube 4K miễn phí. Hỗ trợ mọi thiết bị iPhone, Android, PC.</p>
+</div>
+""", unsafe_allow_html=True)
